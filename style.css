@@ -1,0 +1,319 @@
+/*
+Theme Name: Heaven Brew Premium
+Text Domain: heaven-brew-premium
+Author: Pikocode
+Author URI: https://pikocode.com/
+Description: An e-commerce website for coffee
+Version: 2.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tested up to: 6.4
+Requires PHP: 7.4
+*/
+
+
+/* Copyright (C) 2025 Christine Rose Llorando
+ * This theme is licensed under the GNU General Public License v2.0 or later.
+ */
+
+
+
+ html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    color: #333;
+    text-align: center;
+    padding: 0;
+    padding-bottom: 60px; 
+
+}
+
+main {
+    flex: 1; 
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    z-index: 100;
+    text-decoration: none;
+}
+.skip-link:focus {
+    top: 10px;
+}
+
+
+
+/* Navbar */
+.header {
+    background: whitesmoke;
+    padding: 10px 0;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 80px; 
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.navbar-brand img {
+    display: block;
+    max-width: 120px; 
+    height: auto;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row; /* horizontal by default */
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.navbar-nav .nav-item {
+    margin: 5px 10px;
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+    background: none;
+    position: absolute;
+    top: 50px;
+    right: 80px;
+    z-index: 1100;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-nav .nav-link {
+    color: black;
+    font-size: 18px;
+    transition: 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #d4a373;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .navbar-brand {
+        flex-grow: 1;
+    }
+
+    .navbar-toggler {
+        order: 2; 
+        top: 25px !important;
+        right: 20px !important;
+    }
+
+    .navbar-collapse {
+        background: whitesmoke;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .navbar-collapse.show {
+        display: block;
+        background: whitesmoke;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-brand img {
+        left: 40px !important;
+        max-width: 100px;
+        margin-top: -25px; 
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .navbar-brand {
+        flex-grow: 1;
+    }
+
+    .navbar-toggler {
+        order: 2;
+        margin-top: -30px; 
+    }
+
+    .navbar-collapse {
+        display: none;
+    }
+
+    .navbar-collapse.show {
+        display: block;
+        background: whitesmoke;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-brand img {
+        max-width: 120px;
+        margin-top: -40px; 
+
+    }
+}
+
+@media (min-width: 1025px) {
+    .navbar-collapse {
+        display: flex !important;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .navbar-brand img {
+        max-width: 150px;
+    }
+}
+
+/*FOOTER SECTION*/
+footer {
+    background: #6f4e37;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 10px 5px;
+        font-size: 10px;
+    }
+}
+
+
+
+
+.alignleft {
+    float: left;
+    margin-right: 1.5em;
+    margin-bottom: 1em;
+}
+
+.alignright {
+    float: right;
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+}
+
+.wp-caption {
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.wp-caption-text {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+}
+
+.sticky {
+    background-color: #f4f4f4;
+    border-left: 4px solid #e94e77; 
+    padding-left: 10px;
+}
+
+.gallery-caption {
+    font-size: 1em;
+    color: #333;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.bypostauthor {
+    font-size: 1em;
+    color: #555;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
